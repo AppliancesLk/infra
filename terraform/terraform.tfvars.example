@@ -1,0 +1,28 @@
+# ============================================================
+# Appliances.lk Production Terraform Variables
+# ============================================================
+#
+# Copy this file to terraform.tfvars for local use.
+#
+# NEVER commit terraform.tfvars.
+#
+
+postgres_admin_username = "replace-with-production-admin"
+postgres_admin_password = "replace-with-secure-production-password"
+
+# Production application runtime configuration.
+# Copy real values into terraform.tfvars only.
+
+storage_account_name = "replace-with-globally-unique-storage-name"
+
+jwt_secret = "replace-with-secure-jwt-secret"
+
+email_user         = "replace-with-production-email"
+email_app_password = "replace-with-email-app-password"
+email_from_address = "replace-with-production-from-address"
+
+gemini_api_key = "replace-with-gemini-api-key"
+
+payhere_merchant_id     = "replace-with-payhere-merchant-id"
+payhere_merchant_secret = "replace-with-payhere-merchant-secret"
+payhere_mode            = "sandbox"

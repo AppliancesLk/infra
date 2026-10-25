@@ -1,0 +1,24 @@
+﻿# Terraform working directory
+.terraform/
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+
+# Local variable files containing secrets
+terraform.tfvars
+*.auto.tfvars
+
+# Plans
+*.tfplan
+
+# Crash files
+crash.log
+crash.*.log
+
+# CLI configuration
+.terraformrc
+terraform.rc
+
+# Do NOT ignore .terraform.lock.hcl.
+# It should be committed for reproducible provider versions.
