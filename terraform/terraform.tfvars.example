@@ -1,0 +1,11 @@
+﻿# ============================================================
+# Appliances.lk Production Terraform Variables
+# ============================================================
+#
+# Copy this file to terraform.tfvars for local use.
+#
+# NEVER commit terraform.tfvars.
+#
+
+postgres_admin_username = "replace-with-production-admin"
+postgres_admin_password = "replace-with-secure-production-password"
