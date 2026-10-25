@@ -19,6 +19,12 @@ resource "azurerm_postgresql_flexible_server" "prod" {
     environment = var.environment
     managed_by  = "Terraform"
   }
+
+  lifecycle {
+    ignore_changes = [
+      zone
+    ]
+  }
 }
 
 resource "azurerm_postgresql_flexible_server_database" "app" {
@@ -34,4 +40,10 @@ resource "azurerm_postgresql_flexible_server_firewall_rule" "azure_services" {
   server_id        = azurerm_postgresql_flexible_server.prod.id
   start_ip_address = "0.0.0.0"
   end_ip_address   = "0.0.0.0"
+}
+
+resource "azurerm_postgresql_flexible_server_configuration" "extensions" {
+  name      = "azure.extensions"
+  server_id = azurerm_postgresql_flexible_server.prod.id
+  value     = "uuid-ossp"
 }

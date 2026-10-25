@@ -17,3 +17,23 @@ output "container_app_environment_name" {
   description = "Production Container Apps environment."
   value       = azurerm_container_app_environment.prod.name
 }
+
+output "backend_url" {
+  description = "Production backend API URL."
+  value       = local.backend_url
+}
+
+output "frontend_url" {
+  description = "Production frontend URL."
+  value       = local.frontend_url
+}
+
+output "storage_account_name" {
+  description = "Production Azure Storage Account."
+  value       = azurerm_storage_account.prod.name
+}
+
+output "product_image_container" {
+  description = "Blob container used for production product images."
+  value       = azurerm_storage_container.product_images.name
+}
